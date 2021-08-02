@@ -1,0 +1,41 @@
+Tonight's attendees:
+Class	Method	Object 	Instance variable 
+
+I am compiled from a .java file. 
+★ class 
+
+My instance variable values can be different from my buddy's values.
+★ object 
+
+I behave like a template.
+★ class 
+
+I like to do stuff .
+★ object 	method 
+
+I can have many methods.
+★ class 	object 
+
+I represent 'state'.
+★ instance variable
+
+I have behaviors.
+★ object 	class 
+
+I am located in objects.
+★ instance variable	method 
+
+I live on the heap.
+★ object 
+
+I am used to create object instances.
+★ class 
+
+My state can change.
+★ instance variable 	object 
+
+I declare methods.
+★ class 
+
+I can change at runtime 
+★ object 	instance variable 
