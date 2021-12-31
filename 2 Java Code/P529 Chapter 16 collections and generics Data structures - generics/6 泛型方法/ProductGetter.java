@@ -27,7 +27,41 @@ public class ProductGetter<T> {
   }
 
   // 這是泛型方法
+  /**
+   * @param <E>  泛型標識，具體類型，調用方法時指定
+   * @param list 參數
+   * @return
+   */
   public <E> E getProduct(ArrayList<E> list) {
     return list.get(random.nextInt(list.size()));
+  }
+
+  /**
+   * 靜態的泛型方法，採用多個泛型類型
+   * 
+   * @param <T>
+   * @param <E>
+   * @param <K>
+   * @param t
+   * @param e
+   * @param k
+   */
+  public static <T, E, K> void printType(T t, E e, K k) {
+    System.out.println(t + "\t" + t.getClass().getSimpleName());
+    System.out.println(e + "\t" + e.getClass().getSimpleName());
+    System.out.println(k + "\t" + k.getClass().getSimpleName());
+
+  }
+
+  /**
+   * 定義泛型可變參數
+   * 
+   * @param <E>
+   * @param e
+   */
+  public static <E> void print(E... e) {
+    for (int i = 0; i < e.length; i++) {
+      System.out.println(e[i]);
+    }
   }
 }

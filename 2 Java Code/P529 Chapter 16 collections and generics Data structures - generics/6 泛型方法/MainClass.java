@@ -1,16 +1,30 @@
+import java.util.ArrayList;
+
 public class MainClass {
   public static void main(String[] args) {
-    // 創建抽獎器對象，指定數據類型
-    ProductGetter<String> stringProductGetter = new ProductGetter<>();
+    ProductGetter<Integer> productGetter = new ProductGetter<>();
 
-    // 給抽獎器填充獎品
-    String[] strProducts = { "蘋果手機", "掃地機器人", "咖啡機", "掛燙機", "捲髮棒" };
-    for (int i = 0; i < strProducts.length; i++) {
-      stringProductGetter.addProduct(strProducts[i]);
-    }
+    ArrayList<String> strList = new ArrayList<>();
+    strList.add("iPhone");
+    strList.add("MacBook Pro");
+    strList.add("car");
+    // 調用泛型方法。泛型方法的類型在調用方法的時候指定。不必和類一樣。
+    String product1 = productGetter.getProduct(strList);
+    System.out.println(product1 + "\t" + product1.getClass().getSimpleName());
 
-    // 抽獎
-    String productl = stringProductGetter.getProduct();
-    System.out.println("恭喜您，抽中了：" + productl);
+    ArrayList<Integer> intList = new ArrayList<>();
+    intList.add(100000);
+    intList.add(200000);
+    intList.add(300000);
+    // 調用泛型方法。泛型方法的類型在調用方法的時候指定。不必和類一樣。
+    Integer product2 = productGetter.getProduct(intList);
+    System.out.println(product2 + "\t" + product2.getClass().getSimpleName());
+
+    System.out.println("調用多個泛型類型的靜態方法：");
+    ProductGetter.printType(100, "java", true);
+
+    System.out.println("使用泛型可變參數：");
+    ProductGetter.print(1, 2, 3, 4, 5);
+    ProductGetter.print("a", "b", "c");
   }
 }
