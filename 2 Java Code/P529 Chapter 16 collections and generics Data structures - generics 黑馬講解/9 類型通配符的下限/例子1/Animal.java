@@ -1,0 +1,6 @@
+/**
+ * Animal
+ */
+public class Animal {
+
+}
