@@ -18,6 +18,9 @@ public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote {
 
   public static void main(String[] args) {
     try {
+      // Make the remote object, then ‘bind’ it to the rmiregistry using the static
+      // Naming,rebind(). The name you register it under is the name clients will need
+      // to look it up in the rmi registry.
       MyRemote service = new MyRemoteImpl();
       Naming.rebind("Remote Hello", service);
     } catch (Exception ex) {
