@@ -139,16 +139,17 @@ public class Model extends Observable {
     public static boolean emptySpaceExists(Board b) {
         // TODO: Fill in this function.
         // size是棋盘的行数（row)。这是个正方形的棋盘，所以row和column数是相等的，都为size。
-        // 根据TestEmptySpace.java的测试。打印了一下。得知下面的循环中，i是行数，i=0是bottom row；j是列数，j=0是left column。
+        // 根据TestEmptySpace.java的测试。打印了一下。得知下面的循环中，i是列数，i=0是left column；j是行数，j=0是bottom row。
         for (int i = 0; i < b.size(); i++) {
             for (int j = 0; j < b.size(); j++) {
                 if (b.tile(i,j) == null) {
+//                    System.out.println(b.tile(2,2));
                     return true;
                 }
             }
         }
         // 测试代码
-        // 如果是tile是空的，打印出来的是null。如果不为空，打印出来的是8@(2, 2)。即以左下角为原点（此时row=0，column=0），row=2和column=2的位置的tile显示的值是8.
+        // 如果是tile是空的，打印出来的是null。如果不为空，打印出来的是8@(2, 2)。即以左下角为原点（此时column=0, row=0），column=2和row=2的位置的tile显示的值是8.
         // System.out.println(b.tile(2,2));
         // System.out.println(b.size());
         return false;
@@ -161,10 +162,10 @@ public class Model extends Observable {
      */
     public static boolean maxTileExists(Board b) {
         // TODO: Fill in this function.
-        // b.tile(2,2)拿到的是以左下角为原点（此时row=0，column=0），row=2和column=2的位置的tile的object。b.tile(2,2).value()是这个object显示的值。
+        // b.tile(2,2)拿到的是以左下角为原点（此时column=0, row=0），column=2和row=2的位置的tile的object。b.tile(2,2).value()是这个object显示的值。
         // 测试代码
         // System.out.println(b.tile(2,2).value());
-        // 下面的循环中，i是行数，i=0是bottom row；j是列数，j=0是left column。
+        // 下面的循环中，i是列数，i=0是left column；j是行数，j=0是bottom row。
         for (int i = 0; i < b.size(); i++) {
             for (int j = 0; j < b.size(); j++) {
                 if (b.tile(i,j) == null) {
@@ -194,11 +195,11 @@ public class Model extends Observable {
                     return true;
                 } else {
                     // 无空tile
-                    // 横向比较是否有相邻相等的
+                    // 每一column里，比较每row是否有相邻tile的value相等的
                     if (j+1<b.size() && b.tile(i,j).value() == b.tile(i,j+1).value()) {
                         return true;
                     } else if  (i+1<b.size() && b.tile(i,j).value() == b.tile(i+1,j).value()){
-                        // 纵向比较是否有相邻的tile的value相等
+                        // 每一row里，比较每column是否有相邻tile的value相等的
                         return true;
                     }
                 }
