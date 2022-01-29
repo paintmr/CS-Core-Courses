@@ -113,6 +113,27 @@ public class Model extends Observable {
         // TODO: Modify this.board (and perhaps this.score) to account
         // for the tilt to the Side SIDE. If the board changed, set the
         // changed local variable to true.
+        for (int c = 0; c < board.size(); c += 1) {
+            // 记录每一column的空tile数
+            int nullNum = 0;
+            for (int r = board.size()-1; r >= 0 ; r--) {
+                Tile t = board.tile(c, r);
+                if (t == null) {
+                    // 这一column里面只要有空tile，nullNum就加一
+                    nullNum++;
+                }else {
+                    // 如果不是最顶上的那一row
+                    if (!(t.row() == board.size()-1)) {
+                        // 上面有几个空tile，就往上面移动几格
+                        int moveToRow = t.row()+nullNum;
+                        boolean ifMoved = board.move(c,moveToRow,t);
+                        System.out.println(ifMoved);
+                        changed = true;
+                        score += 0;
+                    }
+                }
+            }
+        }
 
         checkGameOver();
         if (changed) {
