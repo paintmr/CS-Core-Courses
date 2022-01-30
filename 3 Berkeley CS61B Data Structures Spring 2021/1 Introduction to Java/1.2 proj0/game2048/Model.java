@@ -109,7 +109,6 @@ public class Model extends Observable {
     public boolean tilt(Side side) {
         boolean changed;
         changed = false;
-
         // TODO: Modify this.board (and perhaps this.score) to account
         // for the tilt to the Side SIDE. If the board changed, set the
         // changed local variable to true.
@@ -122,18 +121,34 @@ public class Model extends Observable {
                     // 这一column里面只要有空tile，nullNum就加一
                     nullNum++;
                 }else {
-                    // 如果不是最顶上的那一row
-                    if (!(t.row() == board.size()-1)) {
-                        // 上面有几个空tile，就往上面移动几格
-                        int moveToRow = t.row()+nullNum;
-                        boolean ifMoved = board.move(c,moveToRow,t);
-                        System.out.println(ifMoved);
-                        changed = true;
-                        score += 0;
+                    // 先移动可以被合并的，再移动不合并的
+
+                    // 1 检查相邻的tile（中间隔着空格的也算）的value是否相等，相等就合并
+                    // 1-1 找到本column中本row的下一个不为null的tile所在的row
+                    int nextValue = -1;
+                    int nextTileIndex = -1;
+                    for (int rowNotNull = r-1; rowNotNull >=0 ; rowNotNull--) {
+                        if (board.tile(c,rowNotNull) != null) {
+                            nextValue = board.tile(c,rowNotNull).value();
+                            nextTileIndex = rowNotNull;
+                            break;
+                        }
                     }
+                    if (t.value()==nextValue) {
+                        // 1-2 把nextNotNullTile移动到t所在的位置合并
+                        board.move(c, r, board.tile(c,nextTileIndex));
+                        // 1-3 总分加分
+                        score += nextValue * 2 ;
+                        // 1-4 在当前的这块tile的位置上建立一块新的tile，value是合并前的2倍
+                        t = t.create(nextValue * 2, c, r);
+                    }
+                    // 2 上面有几个空tile，就往上面移动几格（不合并）
+                    int moveToRow = t.row()+nullNum;
+                    board.move(c,moveToRow,t);
                 }
             }
         }
+        changed = true;
 
         checkGameOver();
         if (changed) {
@@ -209,17 +224,17 @@ public class Model extends Observable {
      */
     public static boolean atLeastOneMoveExists(Board b) {
         // TODO: Fill in this function.
-        for (int i = 0; i < b.size(); i++) {
-            for (int j = 0; j < b.size(); j++) {
+        for (int c = 0; c < b.size(); c++) {
+            for (int r = 0; r < b.size(); r++) {
                 // 有空tile
-                if (b.tile(i,j) == null) {
+                if (b.tile(c, r) == null) {
                     return true;
                 } else {
                     // 无空tile
                     // 每一column里，比较每row是否有相邻tile的value相等的
-                    if (j+1<b.size() && b.tile(i,j).value() == b.tile(i,j+1).value()) {
+                    if (r+1<b.size() && b.tile(c,r).value() == b.tile(c,r+1).value()) {
                         return true;
-                    } else if  (i+1<b.size() && b.tile(i,j).value() == b.tile(i+1,j).value()){
+                    } else if  (c+1<b.size() && b.tile(c,r).value() == b.tile(c+1,r).value()){
                         // 每一row里，比较每column是否有相邻tile的value相等的
                         return true;
                     }
