@@ -78,6 +78,7 @@ public class Board implements Iterable<Tile> {
     /** Adds the tile T to the board */
     public void addTile(Tile t) {
         values[t.col()][t.row()] = t;
+        System.out.println(values[t.col()][t.row()]);
     }
 
     /** Places the Tile TILE at column COL, row ROW where COL and ROW are

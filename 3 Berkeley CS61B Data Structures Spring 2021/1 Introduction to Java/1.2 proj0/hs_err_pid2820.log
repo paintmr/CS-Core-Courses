@@ -1,0 +1,213 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3466), pid=2820, tid=12292
+#
+# JRE version:  (16.0.2+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (16.0.2+7, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=53625:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin -Dfile.encoding=UTF-8 game2048.Main
+
+Host: Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1466)
+Time: Mon Jan 31 00:32:08 2022 China Standard Time elapsed time: 0.010010 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000015dceb9ee00):  JavaThread "Unknown thread" [_thread_in_vm, id=12292, stack(0x0000001112600000,0x0000001112700000)]
+
+Stack: [0x0000001112600000,0x0000001112700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67918a]
+V  [jvm.dll+0x82b819]
+V  [jvm.dll+0x82cfce]
+V  [jvm.dll+0x82d623]
+V  [jvm.dll+0x24ec65]
+V  [jvm.dll+0x675ed9]
+V  [jvm.dll+0x66aaa5]
+V  [jvm.dll+0x308ecb]
+V  [jvm.dll+0x310046]
+V  [jvm.dll+0x35ffde]
+V  [jvm.dll+0x36020f]
+V  [jvm.dll+0x2dfbb8]
+V  [jvm.dll+0x2e0df4]
+V  [jvm.dll+0x7fdb01]
+V  [jvm.dll+0x36ddd1]
+V  [jvm.dll+0x7db5c0]
+V  [jvm.dll+0x3f290f]
+V  [jvm.dll+0x3f46a1]
+C  [jli.dll+0x52fb]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb5a8513b8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000015dcebdcfe0 GCTaskThread "GC Thread#0" [stack: 0x0000001112700000,0x0000001112800000] [id=1716]
+  0x0000015dceb7e6c0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001112800000,0x0000001112900000] [id=12580]
+  0x0000015dcebeb1e0 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001112900000,0x0000001112a00000] [id=12416]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb59fb0ac7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000015dceb99a10] Heap_lock - owner thread: 0x0000015dceb9ee00
+
+Heap address: 0x0000000080c00000, size: 2036 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000080c00000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb5a39320d]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.007 Loaded shared library C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6ad7a0000 - 0x00007ff6ad7ae000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\java.exe
+0x00007ffb97250000 - 0x00007ffb97445000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb96950000 - 0x00007ffb96a0e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb94f90000 - 0x00007ffb95258000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb94e90000 - 0x00007ffb94f90000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffb83ea0000 - 0x00007ffb83eb8000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\jli.dll
+0x00007ffb96a10000 - 0x00007ffb96bb1000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb95260000 - 0x00007ffb95282000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb95410000 - 0x00007ffb9543b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb94ba0000 - 0x00007ffb94cad000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb94a50000 - 0x00007ffb94aed000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb81c10000 - 0x00007ffb81c29000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\VCRUNTIME140.dll
+0x00007ffb82140000 - 0x00007ffb823da000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffb95d50000 - 0x00007ffb95dee000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb955f0000 - 0x00007ffb95620000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffb844d0000 - 0x00007ffb844dc000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\vcruntime140_1.dll
+0x00007ffb75720000 - 0x00007ffb757b1000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\msvcp140.dll
+0x00007ffb59cc0000 - 0x00007ffb5a8f7000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\server\jvm.dll
+0x00007ffb97160000 - 0x00007ffb9720e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb95b30000 - 0x00007ffb95bcc000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb95f20000 - 0x00007ffb96045000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb968a0000 - 0x00007ffb968a8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffb904a0000 - 0x00007ffb904a9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffb8b4e0000 - 0x00007ffb8b507000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb8ee50000 - 0x00007ffb8ee5a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffb95df0000 - 0x00007ffb95e5b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb92870000 - 0x00007ffb92882000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffb84220000 - 0x00007ffb8422a000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\jimage.dll
+0x00007ffb7e850000 - 0x00007ffb7ea34000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffb7e820000 - 0x00007ffb7e84c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffb949c0000 - 0x00007ffb94a42000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffb83fc0000 - 0x00007ffb83fce000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\instrument.dll
+0x00007ffb7ba80000 - 0x00007ffb7baa5000 	C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=53625:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin -Dfile.encoding=UTF-8 
+java_command: game2048.Main
+java_class_path (initial): D:\L Documents\CS-Core-Courses\3 Berkeley CS61B Data Structures Spring 2021\1 Introduction to Java\1.2 proj0\out\production\1.2 proj0;D:\L Documents\CS-Core-Courses\3 Berkeley CS61B Data Structures Spring 2021\1 Introduction to Java\1.2 proj0\out\production\1.2 proj0\javalib\hamcrest-core-1.3.jar;D:\L Documents\CS-Core-Courses\3 Berkeley CS61B Data Structures Spring 2021\1 Introduction to Java\1.2 proj0\out\production\1.2 proj0\javalib\ucb.jar;D:\L Documents\CS-Core-Courses\3 Berkeley CS61B Data Structures Spring 2021\1 Introduction to Java\1.2 proj0\out\production\1.2 proj0\javalib\junit-4.12.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2134900736                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2134900736                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\
+PATH=C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\öÎº£µçÄÔ\AppData\Local\Microsoft\WindowsApps;;D:\Program Files\Microsoft VS Code\bin;d:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin;
+USERNAME=gyj
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 11, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.1466)
+OS uptime: 0 days 7:34 hours
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 158 stepping 11 microcode 0xb4, cx8, cmov, fxsr, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 8136M (1470M free)
+TotalPageFile size 9998M (AvailPageFile size 46M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 179M
+
+vm_info: OpenJDK 64-Bit Server VM (16.0.2+7) for windows-amd64 JRE (16.0.2+7), built on Jul 22 2021 15:19:09 by "" with MS VC++ 16.7 (VS2019)
+
+END.

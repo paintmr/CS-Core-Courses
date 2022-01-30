@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77ab1741-9b39-4235-a93a-5de8491e8541" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javalib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.2 proj0.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game2048/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/game2048/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game2048/GUISource.java" beforeDir="false" afterPath="$PROJECT_DIR$/game2048/GUISource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game2048/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/game2048/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game2048/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/game2048/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Board$AllTileIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/BoardLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/BoardWidget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/GUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/GUISource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/InputSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Side.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/TestAtLeastOneMoveExists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/TestEmptySpace.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/TestMaxTileExists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/TestModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/TestUpOnly.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/TestUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Tile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1.2 proj0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Board$AllTileIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Board$AllTileIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/GUISource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/GUISource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1.2 proj0/game2048/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1.2 proj0/作业.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1.2 proj0/作业.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

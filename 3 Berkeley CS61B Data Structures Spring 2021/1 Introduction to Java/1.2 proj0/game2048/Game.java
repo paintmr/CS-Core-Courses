@@ -80,6 +80,7 @@ public class Game {
         while (true) {
             Tile tile = _source.getNewTile(_model.size());
             if (_model.tile(tile.col(), tile.row()) == null) {
+//                System.out.println(tile);
                 return tile;
             }
         }

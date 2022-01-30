@@ -7,4 +7,4 @@ public static boolean maxTileExists(Board b)
 
 public static boolean atLeastOneMoveExists(Board b)
 
-public boolean tilt(Side side)
+public boolean tilt(Side side)完成north。但是当出现的tile坐标为0,0时，游戏会报错，停止。
