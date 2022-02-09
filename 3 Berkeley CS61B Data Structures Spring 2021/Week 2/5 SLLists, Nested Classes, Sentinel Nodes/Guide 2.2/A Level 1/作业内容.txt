@@ -1,0 +1,3 @@
+We want to add a method to IntList so that if 2 numbers in a row are the same, we add them together and
+make one large node. For example:
+1 → 1 → 2 → 3 becomes 2 → 2 → 3 which becomes 4 → 3
