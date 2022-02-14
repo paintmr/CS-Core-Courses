@@ -12,9 +12,22 @@ public class SquarePrimesTest {
      */
     @Test
     public void testSquarePrimesSimple() {
-        IntList lst = IntList.of(14, 15, 16, 17, 18);
-        boolean changed = IntListExercises.squarePrimes(lst);
-        assertEquals("14 -> 15 -> 16 -> 289 -> 18", lst.toString());
-        assertTrue(changed);
+        // 给出的代码，这个lst无法判定IntListExercises.squarePrimes()有bug。去掉，不用。
+//        IntList lst = IntList.of(14, 15, 16, 17, 18);
+//        boolean changed = IntListExercises.squarePrimes(lst);
+//        assertEquals("14 -> 15 -> 16 -> 289 -> 18", lst.toString());
+//        assertTrue(changed);
+
+        // 练习代码
+        IntList L = IntList.of(3, 7, 15, 16, 17, 18); // 包含质数
+//        IntList L = IntList.of(22, 15, 16, 18); // 没有一个质数的情况
+        boolean ifChanged = IntListExercises.squarePrimes(L);
+        assertEquals("9 -> 49 -> 15 -> 16 -> 289 -> 18", L.toString());
+//        assertEquals("22 -> 15 -> 16 -> 18", L.toString());
+        if (ifChanged) {
+            assertTrue(ifChanged);
+        } else {
+            assertFalse(ifChanged);
+        }
     }
 }

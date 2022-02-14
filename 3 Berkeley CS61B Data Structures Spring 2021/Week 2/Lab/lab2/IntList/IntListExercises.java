@@ -10,7 +10,8 @@ public class IntListExercises {
      */
     public static void addConstant(IntList lst, int c) {
         IntList head = lst;
-        while (head.rest != null) {
+//        while (head.rest != null) {  如果用这个判断条件，最后一个节点的rest==null，此时的first没法加上c
+        while (head != null) {
             head.first += c;
             head = head.rest;
         }
@@ -25,8 +26,12 @@ public class IntListExercises {
      */
     public static void setToZeroIfMaxFEL(IntList L) {
         IntList p = L;
+
         while (p != null) {
-            if (firstDigitEqualsLastDigit(max(p))) {
+            int currentMax = max (p); // +
+            boolean firstEqualsLast = firstDigitEqualsLastDigit(currentMax); // + // 错误。当currentMax=10。firstEqualLast = true。而此时应该为false
+//            if (firstDigitEqualsLastDigit(max(p))) { // -
+            if (firstEqualsLast) { // +
                 p.first = 0;
             }
             p = p.rest;
@@ -51,7 +56,8 @@ public class IntListExercises {
      */
     public static boolean firstDigitEqualsLastDigit(int x) {
         int lastDigit = x % 10;
-        while (x > 10) {
+        // while (x > 10) { // 错误代码，应该是x>=10否则会直接执行下面 x%10（这里x=10），导致firstDigit=0
+        while (x >= 10) {
             x = x / 10;
         }
         int firstDigit = x % 10;
@@ -77,6 +83,8 @@ public class IntListExercises {
             lst.first *= lst.first;
         }
 
-        return currElemIsPrime || squarePrimes(lst.rest);
+        // return currElemIsPrime || squarePrimes(lst.rest); // 错误代码
+        squarePrimes(lst.rest); // +
+        return currElemIsPrime; // +
     }
 }
