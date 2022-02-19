@@ -73,4 +73,8 @@ public class AList {
     items[0] = x;
     size++;
   }
+
+  public int getFirst() {
+    return items[0];
+  }
 }

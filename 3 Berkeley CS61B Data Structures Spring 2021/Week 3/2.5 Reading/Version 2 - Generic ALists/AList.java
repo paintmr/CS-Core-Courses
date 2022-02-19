@@ -65,4 +65,21 @@ public class AList<Item> {
     size--;
     return returnItem;
   }
+
+  public void addFirst(Item x) {
+    Item[] newItems;
+    if (size == items.length) {
+      newItems = (Item[]) new Object[items.length + 1];
+    } else {
+      newItems = (Item[]) new Object[items.length];
+    }
+    System.arraycopy(items, 0, newItems, 1, size);
+    items = newItems;
+    items[0] = x;
+    size++;
+  }
+
+  public Item getFirst() {
+    return items[0];
+  }
 }
