@@ -1,0 +1,9 @@
+1 Static Electricity
+Question (b)
+On line 28, we set level equal to 50. What level do we mean? An instance variable of the
+Pokemon object? The local variable containing the parameter to the change method? The local
+variable in the main method? Something else?
+
+Answer
+It is the local variable in the change method and does not have any effect on the other variables
+of the same name in the Pokemon class or the main method.
