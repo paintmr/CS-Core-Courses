@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class ArraySet<T>{
+public class ArraySet<T> implements Iterable<T> {
   private T[] items;
   private int size; // the next item to be added will be at position size
 
@@ -41,4 +41,26 @@ public class ArraySet<T>{
     return size;
   }
 
+  /** returns an iterator (a.k.a. seer) into ME */
+  public Iterator<T> iterator() {
+    return new ArraySetIterator();
+  }
+
+  private class ArraySetIterator implements Iterator<T> {
+    private int indexPointer;
+
+    public ArraySetIterator() {
+      indexPointer = -1;
+    }
+
+    public boolean hasNext() {
+      return indexPointer + 1 < size;
+    }
+
+    public T next() {
+      T returnItem = items[indexPointer + 1];
+      indexPointer += 1;
+      return returnItem;
+    }
+  }
 }
