@@ -15,12 +15,22 @@ public class ReverseOddDigit implements Iterable<Integer> {
     public boolean hasNext() {
       if (value == 0) {
         return false;
-      }else{
+      } else {
         if (value % 2 == 0) {
           value = value / 10;
         }
         return true;
       }
+      // 下面的代码是按照exercise的思路写的，也可以
+      // if (value == 0) {
+      // return false;
+      // }
+      // if (value % 2 != 0) {
+      // return true;
+      // } else {
+      // value = value / 10;
+      // return true;
+      // }
     }
 
     public Integer next() {
