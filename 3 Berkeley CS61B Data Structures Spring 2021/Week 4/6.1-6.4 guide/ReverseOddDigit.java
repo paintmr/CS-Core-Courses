@@ -1,5 +1,6 @@
 import java.util.Iterator;
 
+// 像exercise的提示那样用一个class同时implements Iterable和Iterator行不通。
 public class ReverseOddDigit implements Iterable<Integer> {
   private int value;
 
