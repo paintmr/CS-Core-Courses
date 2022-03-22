@@ -1,33 +1,63 @@
 package deque;
 
-public class LinkedListDeque<T> inplements Deque<T> {
+public class LinkedListDeque<T> implements Deque<T> {
+    public class Node {
+        public T item;
+        public Node prev;
+        public Node next;
+
+        public Node(T i, Node p, Node n) {
+            item = i;
+            prev = p;
+            next = n;
+        }
+    }
+
+    private Node sentinel;
+    private int size;
+
+    // Creates an empty linked list deque.
+    public LinkedListDeque(){
+        sentinel = new Node(null, null, null);
+        size = 0;
+    }
+
+    public LinkedListDeque(T i) {
+        sentinel = new Node(null, null, null);
+        sentinel.next = new Node(i, sentinel, sentinel);
+        size = 1;
+    }
+
     // Adds an item of type T to the front of the deque. You can assume that item is never null.
-    public void addFirst(T item);
+    public void addFirst(T item) {};
 
     // Adds an item of type T to the back of the deque. You can assume that item is never null.
-    public void addLast(T item);
+    public void addLast(T item) {};
 
     // Returns true if deque is empty, false otherwise.
-    public boolean isEmpty();
+    public boolean isEmpty() {};
 
     // Returns the number of items in the deque.
-    public int size();
+    public int size() {};
 
     // Prints the items in the deque from first to last, separated by a space. Once all the items have been printed, print out a new line.
-    public void printDeque();
+    public void printDeque() {};
 
     // Removes and returns the item at the front of the deque. If no such item exists, returns null.
-    public T removeFirst();
+    public T removeFirst() {};
 
     // Removes and returns the item at the back of the deque. If no such item exists, returns null.
-    public T removeLast();
+    public T removeLast() {};
 
     // Gets the item at the given index, where 0 is the front, 1 is the next item, and so forth. If no such item exists, returns null. Must not alter the deque!
-    public T get(int index);
+    public T get(int index) {};
 
     // The Deque objects we’ll make are iterable (i.e. Iterable<T>) so we must provide this method to return an iterator.
     // public Iterator<T> iterator();
 
     // Returns whether or not the parameter o is equal to the Deque. o is considered equal if it is a Deque and if it contains the same contents (as goverened by the generic T’s equals method) in the same order. (ADDED 2/12: You’ll need to use the instance of keywords for this.)
-    public boolean equals(Object o);
+    public boolean equals(Object o) {};
+
+    // Same as get, but uses recursion.
+    public T getRecursive(int index){}
 }
