@@ -1,19 +1,19 @@
 // 這不是導師的代碼。是我自己寫的。
 public class DLList<eType> {
 
-  public class Node {
-    public eType item;
-    public Node prev;
-    public Node next;
+  private static class Node<N> {
+    private N item;
+    private Node prev;
+    private Node next;
 
-    public Node(eType e, Node p, Node n) {
+    private Node(N e, Node p, Node n) {
       item = e;
       prev = p;
       next = n;
     }
   }
 
-  private final Node sentinel = new Node(null, null, null);
+  private final Node<eType> sentinel = new Node<>(null, null, null);
 
   private int size;
 
@@ -24,19 +24,21 @@ public class DLList<eType> {
   }
 
   public DLList(eType e) {
-    sentinel.next = new Node(e, sentinel, sentinel);
+    sentinel.next = new Node<>(e, sentinel, sentinel);
     sentinel.prev = sentinel.next;
     size = 1;
   }
 
   public void addFirst(eType e) {
-    sentinel.next = new Node(e, sentinel, sentinel.next);
+    sentinel.next = new Node<>(e, sentinel, sentinel.next);
     sentinel.next.next.prev = sentinel.next;
+    size++;
   }
 
   public void addLast(eType e) {
-    sentinel.prev.next = new Node(e, sentinel.prev, sentinel);
+    sentinel.prev.next = new Node<>(e, sentinel.prev, sentinel);
     sentinel.prev = sentinel.prev.next;
+    size++;
   }
 
   public static void main(String[] args) {
