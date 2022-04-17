@@ -88,6 +88,14 @@ public class ArraySet<T> implements Iterable<T> {
     for (T x : this) {
       listofItems.add(x.toString());
     }
+    /*
+     * 官网的解释：join(CharSequence delimiter, Iterable<? extends CharSequence> elements)
+     * Returns a new String composed of copies of the CharSequence elements joined
+     * together with a copy of the specified delimiter.
+     * 其中：CharSequence是个Interface CharSequence的All Known Implementing Classes有:
+     * CharBuffer, Segment, String, StringBuffer, StringBuilder
+     * 所以String.join(参数1，参数2)说白了，参数1是个String，参数2是个Iterable的String object
+     */
     return "{" + String.join(", ", listofItems) + "}";
   }
 
