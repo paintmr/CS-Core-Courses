@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc607cee-6182-4f2e-8c1d-5d60fadec23c" name="Changes" comment="">
+    <list default="true" id="1b98568b-fa0c-4ff4-a3db-afa570c29e29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab3/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/.idea/libraries/javalib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/.idea/libraries/javalib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/AListNoResizing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/BuggyAList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/TestBuggyAList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/randomizedtest/out/production/randomizedtest/randomizedtest/randomizedtest.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deque/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/ArrayDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deque/LinkedListDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/LinkedListDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deque/LinkedListDequeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/LinkedListDequeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 4/6.3 reading Iteration/TestArraySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week 4/6.3 reading Iteration/TestArraySet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +34,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="26jGGb1VL2YvWG85BmpW4bd5b8u" />
+  <component name="ProjectId" id="287beiULtx9UGY0OFQ41X7Bt75i" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,7 +43,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/junit4.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -36,23 +51,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dc607cee-6182-4f2e-8c1d-5d60fadec23c" name="Changes" comment="" />
-      <created>1647929488279</created>
+      <changelist id="1b98568b-fa0c-4ff4-a3db-afa570c29e29" name="Changes" comment="" />
+      <created>1650570669831</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647929488279</updated>
+      <updated>1650570669831</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

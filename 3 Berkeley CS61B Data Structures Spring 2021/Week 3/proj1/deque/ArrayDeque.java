@@ -211,16 +211,74 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
   // Gets the item at the given index, where 0 is the front, 1 is the next item,
   // and so forth. If no such item exists, returns null. Must not alter the deque!
   public T get(int index) {
-
+    if (index >= size) {
+      return null;
+    } else {
+      // 数据集中在数组中间
+      if (getStopPoint() - getStartPoint() > 0) {
+        return items[getStartPoint() + index];
+      } else {
+        // 数据分散在数组两端
+        if (getStartPoint() + index >= items.length) {
+          return items[index - (items.length - getStartPoint())];
+        } else {
+          return items[getStartPoint() + index];
+        }
+      }
+    }
   }
 
   // The Deque objects we’ll make are iterable (i.e. Iterable<T>) so we must
   // provide this method to return an iterator.
-  // public Iterator<T> iterator();
+  public Iterator<T> iterator() {
+    return new ArrayDequeIterator();
+  }
+
+  private class ArrayDequeIterator implements Iterator<T> {
+    private int indexPointer;
+
+    public ArrayDequeIterator() {
+      indexPointer = -1;
+    }
+
+    public boolean hasNext() {
+      if (get(indexPointer + 1) == null) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    public T next() {
+      T returnItem =(T) get(indexPointer + 1);
+      indexPointer += 1;
+      return returnItem;
+    }
+  }
 
   // Returns whether or not the parameter o is equal to the Deque. o is considered
   // equal if it is a Deque and if it contains the same contents (as goverened by
   // the generic T’s equals method) in the same order. (ADDED 2/12: You’ll need to
   // use the instance of keywords for this.)
-  public boolean equals(Object o);
+  public boolean equals(Object o){
+    if (o == null) {
+      return false;
+    }
+    if (o == this) {
+      return true;
+    }
+    if (!(o instanceof ArrayDeque)) {
+      return false;
+    }
+    ArrayDeque<T> arrDo = (ArrayDeque<T>) o;
+    if (arrDo.size() != size()) {
+      return false;
+    }
+    for(int i = 0; i < size; i++) {
+      if(arrDo.get(i) != get(i)) {
+        return false;
+      }
+    }
+    return true;
+  }
 }

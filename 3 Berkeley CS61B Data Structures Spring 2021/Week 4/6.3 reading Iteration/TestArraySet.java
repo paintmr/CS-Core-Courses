@@ -19,7 +19,8 @@ public class TestArraySet {
     }
 
     // 方法二。因为ArraySet继承了Iterable，所以可以直接用这种循环打印的方法。
-    // This is how set works. class Set extends class Collection. class Collection extends class Iterable.
+    // This is how set works. class Set extends class Collection. class Collection
+    // extends class Iterable.
     for (String string : s) {
       System.out.println(string);
     }
