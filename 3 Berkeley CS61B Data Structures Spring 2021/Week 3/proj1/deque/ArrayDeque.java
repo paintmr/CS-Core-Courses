@@ -127,7 +127,8 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
   private float getUsageFactor() {
     // 把2个int的除法结果转换为float
-    DecimalFormat df = new DecimalFormat("0.00");
+    // 这里必须多写几个零。否则，例如pattern写"0.000"，算出usageFactor = 0.25012，会让usageFactor = 0.250，进而缩小array到原来的1/4。而事实上，usageFactor = 0.25012表明数据占据原来的数组是超过1/4的。这会导致缩小的数组无法容纳全部的数据。
+    DecimalFormat df = new DecimalFormat("0.000000");
     String usageFactorStr = df.format((float) size / items.length);
     float usageFactor = Float.parseFloat(usageFactorStr);
     return usageFactor;
@@ -165,6 +166,9 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
   // Removes and returns the item at the front of the deque. If no such item
   // exists, returns null.
   public T removeFirst() {
+    if (size() == 0) {
+      return null;
+    }
     float usageFactor = getUsageFactor();
 
     int startPoint = getStartPoint();
@@ -173,21 +177,26 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
     if (usageFactor <= 0.25) {
       int capacity = (int) (items.length * 0.25);
       shrinkArr(capacity, startPoint, stopPoint);
+      T returnedItem = items[0];
       items[0] = null;
       nextFirst = 0;
       size--;
-      return items[0];
+      return returnedItem;
     } else {
+      T returnedItem = items[startPoint];
       items[startPoint] = null;
       nextFirst = startPoint;
       size--;
-      return items[startPoint];
+      return returnedItem;
     }
   }
 
   // Removes and returns the item at the back of the deque. If no such item
   // exists, returns null.
   public T removeLast() {
+    if (size() == 0) {
+      return null;
+    }
     float usageFactor = getUsageFactor();
 
     int startPoint = getStartPoint();
@@ -196,15 +205,17 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
     if (usageFactor <= 0.25) {
       int capacity = (int) (items.length * 0.25);
       shrinkArr(capacity, startPoint, stopPoint);
+      T returnedItem = items[size - 1];
       items[size - 1] = null;
       nextLast = size - 1;
       size--;
-      return items[size - 1];
+      return returnedItem;
     } else {
+      T returnedItem = items[stopPoint];
       items[stopPoint] = null;
       nextLast = stopPoint;
       size--;
-      return items[stopPoint];
+      return returnedItem;
     }
   }
 

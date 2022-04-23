@@ -4,7 +4,6 @@
     <list default="true" id="1b98568b-fa0c-4ff4-a3db-afa570c29e29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/junit4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deque/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/ArrayDeque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deque/LinkedListDequeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/LinkedListDequeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../3 Berkeley CS61B.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3 Berkeley CS61B.docx" afterDir="false" />
     </list>
