@@ -112,15 +112,15 @@ public class ArrayDequeTest {
 
         ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100000; i++) {
             lld1.addLast(i);
         }
 
-        for (double i = 0; i < 5000; i++) {
+        for (double i = 0; i < 50000; i++) {
             assertEquals("Should have the same value", i, (double) lld1.removeFirst(), 0.0);
         }
 
-        for (double i = 9999; i > 5000; i--) {
+        for (double i = 99999; i > 50000; i--) {
             double removedItem = (double) lld1.removeLast();
             assertEquals("Should have the same value", i, removedItem, 0.0);
         }

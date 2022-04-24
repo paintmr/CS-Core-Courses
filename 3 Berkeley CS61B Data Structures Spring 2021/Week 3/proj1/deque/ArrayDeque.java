@@ -128,9 +128,18 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
   private float getUsageFactor() {
     // 把2个int的除法结果转换为float
     // 这里必须多写几个零。否则，例如pattern写"0.000"，算出usageFactor = 0.25012，会让usageFactor = 0.250，进而缩小array到原来的1/4。而事实上，usageFactor = 0.25012表明数据占据原来的数组是超过1/4的。这会导致缩小的数组无法容纳全部的数据。
-    DecimalFormat df = new DecimalFormat("0.000000");
-    String usageFactorStr = df.format((float) size / items.length);
-    float usageFactor = Float.parseFloat(usageFactorStr);
+//    DecimalFormat df = new DecimalFormat("0.000000");
+//    String usageFactorStr = df.format((float) size / items.length);
+//    float usageFactor = Float.parseFloat(usageFactorStr);
+//    上面三行代码其实还有个缺陷：如果数据非常大，会出bug。比如虽然设置了new DecimalFormat()里面的参数到小数点后6位，但假如size/item.length = 0.25000012，这时候还是会取0.250000，还是会把array缩小为原来的1/4，显然缩小后的array是装不下所有数据的。
+
+//    所以最保险的方法是把size/ items.length 的商在千分位向上取，这样只要结果大于0.25，就不会缩小数组
+    // 必须先噶int size和items.length换成小数，否则Math.ceil不起作用
+    float sizeCast = (float) size;
+    float lengthCast = (float) items.length;
+    // 目标是让0.25*的千分位向上取，可以先把25*变成整数部分，这样就变成了25*的个位数向上取整
+    float usageFactorMagnified = (float) Math.ceil(sizeCast * 1000 / lengthCast); // 例如3019 * 1000 / 12072 ≈ 250.0828363154407，向上取整就是251.0
+    float usageFactor = usageFactorMagnified / 1000; // 然后再把上述结果除以1000，得到0.251
     return usageFactor;
   }
 
