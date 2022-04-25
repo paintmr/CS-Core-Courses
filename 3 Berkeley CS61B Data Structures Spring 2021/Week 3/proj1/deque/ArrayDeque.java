@@ -42,6 +42,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
   // Adds an item of type T to the front of the deque. You can assume that item is
   // never null.
+  @Override
   public void addFirst(T item) {
     items[nextFirst] = item;
     size++;
@@ -58,6 +59,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
   // Adds an item of type T to the back of the deque. You can assume that item is
   // never null.
+  @Override
   public void addLast(T item) {
     items[nextLast] = item;
     size++;
@@ -73,17 +75,19 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
   }
 
   // Returns true if deque is empty, false otherwise.
-  public boolean isEmpty() {
-    return size() == 0;
-  }
+//  public boolean isEmpty() {
+//    return size() == 0;
+//  }
 
   // Returns the number of items in the deque.
+  @Override
   public int size() {
     return size;
   }
 
   // Prints the items in the deque from first to last, separated by a space. Once
   // all the items have been printed, print out a new line.
+  @Override
   public void printDeque() {
     if (isEmpty()) {
       System.out.println("empty ArrayDeque");
@@ -174,6 +178,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
   // Removes and returns the item at the front of the deque. If no such item
   // exists, returns null.
+  @Override
   public T removeFirst() {
     if (size() == 0) {
       return null;
@@ -202,6 +207,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
   // Removes and returns the item at the back of the deque. If no such item
   // exists, returns null.
+  @Override
   public T removeLast() {
     if (size() == 0) {
       return null;
@@ -230,6 +236,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
   // Gets the item at the given index, where 0 is the front, 1 is the next item,
   // and so forth. If no such item exists, returns null. Must not alter the deque!
+  @Override
   public T get(int index) {
     if (index >= size) {
       return null;
@@ -280,6 +287,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
   // equal if it is a Deque and if it contains the same contents (as goverened by
   // the generic T’s equals method) in the same order. (ADDED 2/12: You’ll need to
   // use the instance of keywords for this.)
+  @Override
   public boolean equals(Object o){
     if (o == null) {
       return false;

@@ -4,12 +4,10 @@
     <list default="true" id="1b98568b-fa0c-4ff4-a3db-afa570c29e29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deque/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/ArrayDeque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deque/ArrayDequeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/ArrayDequeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deque/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/Deque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deque/LinkedListDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/LinkedListDeque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque$ArrayDequeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque$ArrayDequeIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDequeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDequeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../~$2 Java.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../~$Berkeley CS61B.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     <property name="project.structure.side.proportion" value="0.11954023" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.MaxArrayDequeTest">
+  <component name="RunManager" selected="JUnit.ArrayDequeTest">
     <configuration name="ArrayDequeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proj1" />
       <extension name="coverage">
@@ -100,9 +98,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MaxArrayDequeTest" />
         <item itemvalue="JUnit.ArrayDequeTest" />
         <item itemvalue="JUnit.LinkedListDequeTest" />
+        <item itemvalue="JUnit.MaxArrayDequeTest" />
       </list>
     </recent_temporary>
   </component>

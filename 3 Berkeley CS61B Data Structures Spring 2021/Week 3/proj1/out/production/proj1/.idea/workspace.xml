@@ -4,12 +4,7 @@
     <list default="true" id="1b98568b-fa0c-4ff4-a3db-afa570c29e29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deque/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/ArrayDeque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deque/ArrayDequeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/ArrayDequeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque$ArrayDequeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque$ArrayDequeIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDeque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDequeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj1/deque/ArrayDequeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../~$2 Java.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../~$2 Java.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../~$Berkeley CS61B.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deque/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/deque/Deque.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +20,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,7 +47,7 @@
     <property name="project.structure.side.proportion" value="0.11954023" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.MaxArrayDequeTest">
+  <component name="RunManager" selected="JUnit.ArrayDequeTest">
     <configuration name="ArrayDequeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proj1" />
       <extension name="coverage">
@@ -92,8 +95,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MaxArrayDequeTest" />
         <item itemvalue="JUnit.ArrayDequeTest" />
+        <item itemvalue="JUnit.MaxArrayDequeTest" />
         <item itemvalue="JUnit.LinkedListDequeTest" />
       </list>
     </recent_temporary>
